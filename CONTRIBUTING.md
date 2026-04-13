@@ -8,12 +8,12 @@ Este documento define as regras que regem toda a participação nos repositório
 
 ## 1. 🧭 Filosofia: Open Source como Política Estudantil
 
-Diretórios Académicos historicamente morrem da mesma doença: **memória institucional zero**. Decisões tomadas em reuniões fechadas, sem registo. Gestões que chegam sem saber o que a anterior prometeu. Alunos sem acesso às atas. Transparência que existe no papel e não na prática.
+Diretórios Acadêmicos historicamente morrem da mesma doença: **memória institucional zero**. Decisões tomadas em reuniões fechadas, sem registro. Gestões que chegam sem saber o que a anterior prometeu. Alunos sem acesso às atas. Transparência que existe no papel e não na prática.
 
 Este repositório existe para matar esse problema na raiz. Adotamos a filosofia dos projetos de software livre e aplicamo-la integralmente à política estudantil:
 
 - **Tudo é público e versionado:** Nenhuma decisão relevante existe fora do Git. Se não tem commit, não aconteceu.
-- **Toda mudança tem autoria:** O histórico de contribuições é imutável. Quem propôs, quem aprovou, quem bloqueou — tudo fica registado para a posteridade.
+- **Toda mudança tem autoria:** O histórico de contribuições é imutável. Quem propôs, quem aprovou, quem bloqueou — tudo fica registrado para a posteridade.
 - **A comunidade é a revisora:** Não existe decisão de gabinete. Propostas que afetam os estudantes são debatidas pelos estudantes antes de virar realidade.
 - **O processo é a garantia:** Não confiamos em pessoas — confiamos no processo. Mesmo que a diretoria mude, as regras permanecem.
 
@@ -43,7 +43,7 @@ O total de reações (👍 + 👎) deve ser igual ou superior a **X% dos estudan
 As reações positivas devem superar as negativas: `👍 > 👎`.
 
 ### 3.3. A Regra do Snapshot
-Exatamente às 00:00 do 8º dia útil, o Bot publica um comentário com o extrato dos votos. **Este registo é a Ata Oficial.** Reações adicionadas após este comentário são juridicamente nulas.
+Exatamente às 00:00 do 8º dia útil, o Bot publica um comentário com o extrato dos votos. **Este registro é a Ata Oficial.** Reações adicionadas após este comentário são juridicamente nulas.
 
 ---
 
@@ -52,8 +52,14 @@ Exatamente às 00:00 do 8º dia útil, o Bot publica um comentário com o extrat
 ### 4.1. Regra de Ouro
 **Todo PR deve estar vinculado a uma Issue aprovada.** O corpo do PR deve conter: `Resolves #<número-da-issue>`.
 
-### 4.2. PR de Conquista
-Quando um problema do mundo real é resolvido (ex: ar condicionado consertado), deve ser aberto um PR criando um ficheiro em `/conquistas/`. O Merge deste PR fecha a Issue oficialmente e gera o crédito histórico.
+### 4.2. PR de Conquista e Memória Institucional Automática
+Quando um problema do mundo real é resolvido (ex: ar condicionado consertado, evento realizado), deve ser aberto um PR criando um arquivo descritivo na pasta `/conquistas/`.
+
+O Merge deste PR fecha a Issue oficialmente. Nesse exato momento, o nosso sistema automatizado (GitHub Actions) entra em ação:
+- O robô faz a leitura do PR aprovado e identifica a Issue original através da tag `Resolves #ID`.
+- Ele extrai os autores (quem teve a ideia original na Issue e quem executou a solução no PR), o título da conquista e a data.
+- Estes metadados são injetados automaticamente no arquivo central `/dados/historico.json`.
+- Este arquivo `.json` alimenta publicamente a **Linha do Tempo de Conquistas** no site oficial do DA. Seu nome e esforço pelo centro ficarão eternizados.
 
 ### 4.3. Maturação
 Todo PR deve ficar aberto para revisão por no mínimo **7 dias úteis** (14 dias para alterações no Estatuto).
@@ -68,4 +74,4 @@ Todo PR deve ficar aberto para revisão por no mínimo **7 dias úteis** (14 dia
 | **Janela de Votação** | 7 dias úteis após label `em-votação` |
 | **Encerramento** | Snapshot automático pelo Bot às 00:00 do 8º dia |
 | **Aprovação** | Quórum atingido + 👍 > 👎 no Snapshot |
-| **Fechar Issue** | Via PR de Conquista em `/conquistas/` |
+| **Fechar Issue** | Via PR de Conquista em `/conquistas/` e extração p/ JSON |
