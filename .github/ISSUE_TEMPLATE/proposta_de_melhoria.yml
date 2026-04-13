@@ -1,0 +1,87 @@
+name: 💡 Proposta de Melhoria
+description: Sugira uma nova iniciativa, evento, processo ou melhoria para o DA-CIn e a comunidade do centro.
+title: "[PROPOSTA] "
+labels:
+  - "tipo: proposta"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Proposta de Melhoria
+        Use este formulário para propor algo novo — um evento, uma mudança de processo, uma iniciativa de infraestrutura ou qualquer ideia que beneficie a comunidade discente do CIn.
+        Sua proposta passará por **debate aberto e votação** conforme as regras do [CONTRIBUTING.md](../../CONTRIBUTING.md).
+        > Aplique a label `tipo: proposta` antes de enviar. A triagem pela diretoria ocorre em paralelo ao debate — não espere por ela para começar a discutir.
+
+  - type: textarea
+    id: justificativa
+    attributes:
+      label: "🔍 Justificativa — qual problema ou lacuna esta proposta resolve?"
+      description: "Descreva a situação atual. Seja específico: cite locais, cursos, semestres ou situações concretas quando possível."
+      placeholder: "O CIn não tem um espaço oficial para divulgar projetos de software feitos pelos alunos. Iniciativas como o sistema de horários alternativo criado por alunos de CC somem sem registro porque não há um canal com respaldo institucional. A proposta é criar um hub de projetos discentes no site do DA."
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: "🚀 Descrição da proposta"
+      description: "O que exatamente você propõe? Seja objetivo e evite soluções vagas."
+      placeholder: "Criar uma seção 'Projetos Discentes' no repositório e no site do DA onde qualquer aluno possa submeter um projeto via Pull Request, com campos padronizados de descrição, tecnologias usadas e link. O DA dará selo de visibilidade institucional ao projeto aprovado."
+    validations:
+      required: true
+
+  - type: textarea
+    id: passos
+    attributes:
+      label: "🗂️ Passos práticos para execução"
+      description: "Liste as etapas concretas para implementar esta proposta. Não precisa ser perfeito — é um ponto de partida para o debate."
+      placeholder: |
+        1. Criar a pasta /projetos-discentes no repositório com um template de submissão
+        2. Definir critérios mínimos de aceite (ex: projeto deve ter repositório público e README)
+        3. Configurar automação para listar projetos aprovados no site do DA
+        4. Divulgar o canal via comunicação oficial do DA no início do semestre
+    validations:
+      required: true
+
+  - type: textarea
+    id: impacto
+    attributes:
+      label: "🎯 Quem se beneficia e como?"
+      description: "Qual parcela da comunidade discente é afetada positivamente? Há algum grupo que pode ser negativamente impactado ou que exige atenção especial?"
+      placeholder: "Todos os alunos que desenvolvem projetos pessoais ou acadêmicos, especialmente ingressantes que buscam referências e alunos de períodos finais construindo portfólio. Não há impacto negativo identificado."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgencia
+    attributes:
+      label: "⏱️ Urgência"
+      description: "Ajuda a diretoria a priorizar a triagem."
+      options:
+        - "🔴 Alta — afeta ativamente estudantes agora"
+        - "🟡 Média — melhoria importante, sem impacto imediato"
+        - "🟢 Baixa — ideia para médio ou longo prazo"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: execucao
+    attributes:
+      label: "🤝 Disponibilidade para ajudar na execução"
+      description: "Propostas com autores engajados têm mais chance de sair do papel. Marque o que se aplica."
+      options:
+        - label: "Quero liderar ou co-liderar a execução desta proposta"
+        - label: "Posso colaborar pontualmente se acionado pela diretoria"
+        - label: "Estou apenas sugerindo — fica a cargo da diretoria executar"
+
+  - type: checkboxes
+    id: pre_requisitos
+    attributes:
+      label: "✅ Confirmações obrigatórias"
+      options:
+        - label: "Li o [CONTRIBUTING.md](../../CONTRIBUTING.md) e entendo que esta Issue passará por debate e votação"
+          required: true
+        - label: "Verifiquei que não existe Issue aberta com a mesma proposta"
+          required: true
+        - label: "Esta proposta é de interesse coletivo da comunidade discente, sem caráter político-partidário"
+          required: true

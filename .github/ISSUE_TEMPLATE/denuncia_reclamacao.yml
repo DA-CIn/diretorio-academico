@@ -1,0 +1,96 @@
+name: 🚨 Denúncia / Reclamação
+description: Reporte um problema concreto que afete a comunidade discente do CIn — infraestrutura, acessibilidade, mobilidade ou questão acadêmica.
+title: "[PROBLEMA] "
+labels:
+  - "tipo: denúncia"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚨 Denúncia / Reclamação
+        Este canal transforma reclamações em pressão institucional documentada. Cada Issue registrada aqui é evidência formal que o DA usa para cobrar a direção do centro.
+        **Quanto mais detalhado o relato, mais forte o argumento.**
+        > ⚠️ Para violações do Código de Conduta (assédio, discriminação), use o canal descrito no [CODE_OF_CONDUCT.md](../../CODE_OF_CONDUCT.md), não este formulário.
+
+  - type: checkboxes
+    id: categoria
+    attributes:
+      label: "🗂️ Área do problema"
+      description: "Marque todas as categorias que se aplicam. Isso orienta a diretoria a acionar o setor correto da administração do CIn."
+      options:
+        - label: "🏗️ **Infraestrutura** — ar condicionado, falta de água, ausência de limpeza noturna, elétrica, internet"
+        - label: "♿ **Acessibilidade** — banheiro adaptado quebrado, rampa bloqueada, barulho que afeta sensibilidade auditiva, sinalização ausente"
+        - label: "🚲 **Mobilidade** — bicicletário lotado, portão entre CIn e CCEN fechado sem justificativa, circulação prejudicada"
+        - label: "🎓 **Burocracia / Acadêmico** — descaso da Prograd com transferências internas, prova marcada em ponto facultativo, travamento em equivalências de grade"
+        - label: "🏠 **Espaço do DA** — ausência de sala física, mobiliário, infraestrutura para funcionamento da gestão"
+        - label: "🔒 **Segurança** — iluminação insuficiente, câmeras inoperantes, acesso indevido a áreas restritas"
+        - label: "📡 **Outro** — descreva nos campos abaixo"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: "📋 Descrição do problema"
+      description: "O que está acontecendo? Informe: local exato, frequência, desde quando ocorre e quem é afetado. Quanto mais específico, melhor."
+      placeholder: "O ar condicionado da sala E-112 (laboratório de sistemas) está com defeito desde o início do semestre. O equipamento emite ruído constante acima de 70 dB durante toda a aula. Já afetou pelo menos três alunos com hipersensibilidade auditiva diagnosticada, que precisaram sair da sala. O problema ocorre em todas as turmas do turno da tarde."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impactados
+    attributes:
+      label: "👥 Quem é diretamente afetado?"
+      description: "Cite grupos específicos se souber — alunos de determinado curso, turno, PCD, usuários de bicicleta etc."
+      placeholder: "Alunos de SI e CC que têm aulas no Bloco E à tarde. Em especial alunos com laudo de hipersensibilidade auditiva que já comunicaram o problema individualmente aos professores sem resultado."
+    validations:
+      required: false
+
+  - type: textarea
+    id: tentativas
+    attributes:
+      label: "🔁 Tentativas anteriores de resolução"
+      description: "Já tentou resolver por outros meios? Informe canais acionados, datas e o retorno (ou a ausência dele)."
+      placeholder: "E-mail enviado para infraestrutura@cin.ufpe.br em 10/03/2025. Protocolo gerado: CIN-2025-0847. Sem resposta após 30 dias. Professora da disciplina também relatou verbalmente à coordenação, sem retorno documentado."
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: "📎 Evidências"
+      description: "Cole links, números de protocolo, prints ou arraste imagens diretamente para este campo. Evidências fortalecem o argumento do DA na cobrança institucional."
+      placeholder: "Print do e-mail enviado: [arraste a imagem aqui]. Número do chamado na prefeitura do campus: PREF-2025-XXXX."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgencia
+    attributes:
+      label: "⏱️ Urgência"
+      options:
+        - "🔴 Urgente — impacto imediato à saúde, segurança ou acessibilidade"
+        - "🟡 Moderada — problema recorrente que prejudica o dia a dia"
+        - "🟢 Baixa — incômodo pontual, mas que merece registro"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: anonimato
+    attributes:
+      label: "🔒 Anonimato institucional"
+      description: |
+        Se marcar esta opção, o DA usará o conteúdo desta Issue para pressionar a **direção do centro**, mas não divulgará seu nome em nenhuma comunicação oficial, ata ou reunião com a administração do CIn.
+        ⚠️ Limitação técnica: seu usuário do GitHub permanece visível no histórico da Issue — o anonimato se aplica apenas às comunicações externas do DA, não à plataforma em si.
+      options:
+        - label: "Exijo anonimato nas comunicações do DA com a direção do CIn e demais órgãos externos ao repositório"
+
+  - type: checkboxes
+    id: pre_requisitos
+    attributes:
+      label: "✅ Confirmações obrigatórias"
+      options:
+        - label: "Li o [CONTRIBUTING.md](../../CONTRIBUTING.md) e entendo o fluxo de triagem desta denúncia"
+          required: true
+        - label: "Esta Issue descreve um problema institucional, não é direcionada a atacar indivíduos"
+          required: true

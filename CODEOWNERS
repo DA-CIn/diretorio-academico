@@ -1,0 +1,57 @@
+# =============================================================================
+# CODEOWNERS — DA-CIn UFPE
+# =============================================================================
+# Este arquivo define revisores obrigatórios por área do repositório.
+# O GitHub bloqueia o merge de qualquer PR que modifique os caminhos listados
+# abaixo até que o grupo responsável aprove formalmente.
+#
+# Sintaxe: <padrão de caminho>  <@dono ou @grupo>
+#
+# Referência oficial:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# 🏛️ DOCUMENTOS CONSTITUCIONAIS — /estatuto/
+# -----------------------------------------------------------------------------
+# O Estatuto é a lei máxima do DA. Qualquer alteração é de alto impacto
+# e exige revisão e aprovação formal da Diretoria Executiva completa.
+# Nenhum PR que toque esta pasta pode ser mergeado sem esse aval.
+# -----------------------------------------------------------------------------
+/estatuto/                          @da-cin-ufpe/diretoria
+
+
+# -----------------------------------------------------------------------------
+# 🗳️ PROCESSOS ELEITORAIS — /eleicoes/
+# -----------------------------------------------------------------------------
+# Documentos eleitorais (editais, atas de apuração, resultados) são sensíveis
+# à integridade do processo democrático do DA. A responsabilidade de revisão
+# é da Diretoria, garantindo que nenhuma parte interessada altere regras
+# eleitorais de forma unilateral e sem escrutínio formal.
+# -----------------------------------------------------------------------------
+/eleicoes/                          @da-cin-ufpe/diretoria
+
+
+# -----------------------------------------------------------------------------
+# 👤 REGISTROS DE CARGOS E MANDATOS — /cargos/
+# -----------------------------------------------------------------------------
+# A pasta /cargos/ contém os registros de ocupantes de cada cargo do DA
+# (diretoria, representantes de curso, comissões). Alterações aqui refletem
+# mudanças na composição oficial da organização.
+#
+# A revisão é de responsabilidade dos Representantes de Curso, que têm
+# legitimidade para validar a entrada e saída de membros em suas respectivas
+# cadeiras e garantir que o registro seja fiel ao resultado das assembleias.
+# -----------------------------------------------------------------------------
+/cargos/                            @da-cin-ufpe/representantes
+
+
+# -----------------------------------------------------------------------------
+# 🔧 ARQUIVOS DE CONFIGURAÇÃO DO REPOSITÓRIO
+# -----------------------------------------------------------------------------
+# Alterações nas configurações do próprio repositório (workflows, templates,
+# este arquivo CODEOWNERS, etc.) exigem revisão da Diretoria, pois impactam
+# diretamente a infraestrutura de governança do DA.
+# -----------------------------------------------------------------------------
+/.github/                           @da-cin-ufpe/diretoria

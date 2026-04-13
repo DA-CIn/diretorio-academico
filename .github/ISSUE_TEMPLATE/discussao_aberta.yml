@@ -1,0 +1,84 @@
+name: 💬 Discussão Aberta
+description: Inicie um debate sobre tema de interesse da comunidade discente que ainda não é uma proposta formal nem uma denúncia.
+title: "[DISCUSSÃO] "
+labels:
+  - "tipo: discussão"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💬 Discussão Aberta
+        Use este espaço para pautas ainda em formação — ideias embrionárias, perguntas para a comunidade, debates sobre política estudantil ou temas que precisam de mais deliberação antes de virar uma proposta formal.
+        > **Discussões não geram ação direta nem entram no fluxo de votação.** Quando o debate produzir uma ideia concreta, o próximo passo é abrir uma Issue de *Proposta de Melhoria* ou *Denúncia* referenciando esta thread. Veja o [CONTRIBUTING.md](../../CONTRIBUTING.md) para entender o ciclo completo.
+
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: "🗂️ Categoria do tema"
+      description: "Escolha a que melhor descreve o assunto. Ajuda na indexação e na triagem."
+      options:
+        - "🏛️ Governança — estrutura, processos, regras do DA e do repositório"
+        - "🎓 Vida Acadêmica — grades, disciplinas, relação com Prograd e docentes"
+        - "🏗️ Infraestrutura e Espaço Físico"
+        - "🌐 Tecnologia e Projetos Discentes"
+        - "📣 Comunicação e Identidade do DA"
+        - "🤝 Relações Interinstitucionais — outros DAs, DCE, direção do CIn, UFPE"
+        - "🗳️ Eleições e Representação"
+        - "💡 Outro"
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: "📌 Contexto e motivação"
+      description: "Por que este tema precisa ser debatido agora? Qual é o cenário atual que torna esta discussão relevante?"
+      placeholder: "Com a reativação do DA, ainda não está definido como será a política de comunicação oficial. Quais canais usar? Quem autoriza uma publicação em nome do DA? Como garantir que comunicados da diretoria não se misturem com opiniões pessoais de membros? Isso afeta diretamente a credibilidade do DA perante o centro e os alunos."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desenvolvimento
+    attributes:
+      label: "🧵 Desenvolvimento — ângulos, tensões e perguntas em aberto"
+      description: "Apresente os diferentes lados que você já identificou. Quais são as tensões? O que você quer que a comunidade responda?"
+      placeholder: |
+        Ponto A: Centralizar comunicação na diretoria garante consistência, mas cria gargalo e pode silenciar vozes dissidentes.
+
+        Ponto B: Descentralizar para todos os membros é mais democrático, mas aumenta o risco de ruído e mensagens contraditórias em nome do DA.
+
+        Perguntas em aberto:
+        - Existe algum DA de outro centro da UFPE com um modelo de comunicação que funcione bem?
+        - Como outros projetos open source lidam com comunicação oficial vs. opiniões de contribuidores?
+    validations:
+      required: true
+
+  - type: textarea
+    id: resultado_esperado
+    attributes:
+      label: "🎯 O que você espera desta discussão?"
+      description: "Uma decisão coletiva? Uma proposta formal derivada? Apenas registro de perspectivas divergentes para consulta futura?"
+      placeholder: "Que ao final do debate tenhamos um consenso mínimo sobre o modelo de comunicação para que alguém possa abrir uma Proposta de Melhoria estruturada, ou que o tema vá para pauta de assembleia."
+    validations:
+      required: false
+
+  - type: textarea
+    id: referencias
+    attributes:
+      label: "📚 Referências e materiais de apoio"
+      description: "Links, documentos, exemplos de outros DAs, artigos ou qualquer material que embase o debate."
+      placeholder: "Estatuto do DA-CComp UFCG (referência para modelo de comunicação): https://... — Discussão similar no DA do IC-Unicamp: https://..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: pre_requisitos
+    attributes:
+      label: "✅ Confirmações obrigatórias"
+      options:
+        - label: "Li o [CONTRIBUTING.md](../../CONTRIBUTING.md) e entendo que esta Issue é espaço de debate, não de votação direta"
+          required: true
+        - label: "Verifiquei que não existe discussão aberta sobre o mesmo tema"
+          required: true
+        - label: "Este debate é de interesse coletivo da comunidade discente, sem caráter político-partidário"
+          required: true
