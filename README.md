@@ -14,8 +14,6 @@ Este repositório é a nossa plataforma oficial. Aqui, adotamos a filosofia open
 - **Rastreabilidade:** Quem propôs, quem aprovou e quem bloqueou fica registrado para a posteridade.
 - **Memória Imutável:** A regra fundamental do centro agora é: _"Se não tem commit, não aconteceu."_
 
----
-
 ## 🛠️ Como a comunidade pode agir (Issues e PRs)
 
 Não existem "decisões de gabinete" ou negociações informais. A comunidade é a revisora e a aprovação de pautas segue um fluxo claro, assíncrono e auditável.
@@ -34,16 +32,12 @@ Para agir, basta seguir o protocolo:
 
 Nós não trancamos debates. Uma vez que uma pauta recebe a label `em-votação`, a janela para receber reações é de **7 dias úteis**. À meia-noite do 8º dia útil, o **Bot Escrivão (GitHub Action)** varre a issue, tira um "snapshot" dos votos e decreta se o quórum foi atingido e a pauta aprovada. Leia o [CONTRIBUTING.md](https://www.google.com/search?q=CONTRIBUTING.md) para os detalhes matemáticos do quórum.
 
----
-
 ## 🏛️ Estrutura e Governança do DA
 
 Para ser ágil sem perder a representatividade, o DA-CIn atua com uma voz unificada, mas com uma estrutura capilarizada:
 
 1.  **Diretoria Executiva:** O motor do DA. Atua na consolidação e execução das decisões através das Diretorias de Infraestrutura e Vivência, Comunicação, Soluções Tecnológicas (DevOps Cívico) e Ações de Ensino e Suporte Acadêmico.
 2.  **Conselho de Representantes de Turma (CRT):** O DA-CIn exige representação obrigatória de **2 membros (Titular e Adjunto)** para cada um dos cursos: Ciência da Computação (CC), Engenharia da Computação (EC), Sistemas de Informação (SI) e Inteligência Artificial (IA). Eles são a ponte de demandas reais e garantem o combate a abusos acadêmicos sistêmicos.
-
----
 
 ## 🗺️ Mapa do repositório
 
@@ -66,8 +60,6 @@ Abaixo estão os documentos estruturais que compõem a nossa "Legislação em C�
   - 📝 [`template_ata_reuniao.md`](https://www.google.com/search?q=template_ata_reuniao.md) — Padrão oficial para registrar decisões do Conselho e Diretoria.
   - 🔄 [`pull_request_template.md`](https://www.google.com/search?q=pull_request_template.md) — Checklist obrigatório para transformar debates em código.
 
----
-
 ## 🛡️ Código de Conduta
 
 Este repositório é território público de toda a comunidade discente. Com acesso vem responsabilidade.
@@ -75,8 +67,6 @@ Este repositório é território público de toda a comunidade discente. Com ace
 Esperamos respeito, decisões baseadas em evidências e foco exclusivo no **interesse coletivo dos estudantes do CIn**. Debates políticos sobre a educação pública são encorajados; no entanto, o **uso político-partidário** do espaço é estritamente proibido. Assédio, manipulação de votos ou má-fé técnica resultarão em suspensão imediata da organização.
 
 Leia as regras e o processo de denúncia completo no nosso **[Código de Conduta](https://www.google.com/search?q=CODE_OF_CONDUCT.md)**.
-
----
 
 ## 🌐 Links Oficiais
 
