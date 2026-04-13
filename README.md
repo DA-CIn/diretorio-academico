@@ -1,8 +1,6 @@
-<div align="center">
+<div align="center" style="margin: 2rem 0 4rem">
   <img src=".github/assets/logo-dacin.svg" alt="Diretório Académico do CIn (UFPE) — DA-CIn" width="700" />
 </div>
-
----
 
 ## 🎯 Propósito e Objetivos
 
