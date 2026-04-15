@@ -6,7 +6,7 @@
 
 O **Diretório Acadêmico (DA-CIn)** é a entidade de representação política e defesa dos direitos dos estudantes do Centro de Informática da UFPE. Ele atua de forma unificada para aumentar o poder de negociação da comunidade discente em pautas de infraestrutura, orçamento, acessibilidade e burocracia acadêmica.
 
-Inativo desde 2024 devido a problemas clássicos de gestão — perda de memória institucional, decisões de portas fechadas e falta de continuidade —, o DA-CIn ressurge sob um novo paradigma: **Governança como Código**.
+Inativo desde 2024, o DA-CIn ressurge sob um novo paradigma: **Governança como Código**.
 
 Este repositório é a nossa plataforma oficial. Aqui, adotamos a filosofia open source aplicada à política estudantil:
 
